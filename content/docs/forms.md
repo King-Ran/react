@@ -13,10 +13,8 @@ HTML表单元素与React中的其他DOM元素有所不同,因为表单元素生�
 
 ```html
 <form>
-  <label>
-    Name:
-    <input type="text" name="name" />
-  </label>
+  <label>Name:</label>
+  <input type="text" name="name" />
   <input type="submit" value="Submit" />
 </form>
 ```
@@ -53,10 +51,8 @@ class NameForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
-          Name:
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
-        </label>
+        <label>Name:</label>
+        <input type="text" value={this.state.value} onChange={this.handleChange} />
         <input type="submit" value="Submit" />
       </form>
     );
@@ -113,10 +109,8 @@ class EssayForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
-          Name:
-          <textarea value={this.state.value} onChange={this.handleChange} />
-        </label>
+        <label>Name:</label>
+        <textarea value={this.state.value} onChange={this.handleChange} />
         <input type="submit" value="Submit" />
       </form>
     );
@@ -163,15 +157,13 @@ class FlavorForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
-          Pick your favorite La Croix flavor:
+        <label>Pick your favorite La Croix flavor:</label>
           <select value={this.state.value} onChange={this.handleChange}>
             <option value="grapefruit">Grapefruit</option>
             <option value="lime">Lime</option>
             <option value="coconut">Coconut</option>
             <option value="mango">Mango</option>
           </select>
-        </label>
         <input type="submit" value="Submit" />
       </form>
     );
@@ -215,13 +207,12 @@ class Reservation extends React.Component {
     return (
       <form>
         <label>
-          Is going:
+          Is going:</label>
           <input
             name="isGoing"
             type="checkbox"
             checked={this.state.isGoing}
             onChange={this.handleInputChange} />
-        </label>
         <br />
         <label>
           Number of guests:
